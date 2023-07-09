@@ -1,0 +1,50 @@
+<html>
+<head>
+</head>
+<body>
+<p><font face='Times New Roman' size='14' color='blue'>Menghitung Jumlah Populasi Tanaman</font></p>
+<form name='hitungls3' method='post'>
+<table>
+<tr>
+<td>Luas Lahan (Meter)</td>
+<td>:</td>
+<td><input type='number' name='alass3' value='0' onchange='hitungluas();'></td>
+</tr>
+<tr>
+<td>Panjang jarak tanam (cm)</td>
+<td>:</td>
+<td><input type='number' name='tinggis3' value='0' onchange='hitungluas();'></td>
+</tr>
+<tr>
+<td>Lebar jarak tanam (cm)</td>
+<td>:</td>
+<td><input type='number' name='lebars3' value='0' onchange='hitungluas();'></td>
+</tr>
+<tr>
+<td>Jumlah populasi tanaman</td>
+<td>:</td>
+<td> <input type='text' name='luass3' onchange='hitungluas();' disabled="true"></td>
+</tr>
+</table>
+</form>
+<h5>Keterangan :</h5>
+<p>1 hektar = 10000 meter</p>
+<h3>Program lainnya</h3>
+<ul>
+	<li><a href="pupuk.html">Penghitung kebutuhan pupuk kandang cabai</a></li>
+	<li><a href="dolomit.html">Penghitung kebutuhan Dolomit</a></li>
+</ul>
+</body>
+<script type='text/javascript'>
+function hitungluas(){
+var alas = document.forms['hitungls3']['alass3'].value;
+alas = parseInt(alas);
+var tinggi = document.forms['hitungls3']['tinggis3'].value;
+tinggi = parseInt(tinggi);
+var lebar = document.forms['hitungls3']['lebars3'].value;
+lebar = parseInt(lebar);
+var luas = alas/((tinggi/100)*(lebar/100));
+document.forms['hitungls3']['luass3'].value = luas;
+}
+</script>
+</html>

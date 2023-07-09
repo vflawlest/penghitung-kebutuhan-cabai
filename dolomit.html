@@ -1,0 +1,36 @@
+<html>
+<head>
+</head>
+<body>
+<p><font face='Times New Roman' size='14' color='blue'>Kebutuhan dolomit</font></p>
+<form name='hitungls3' method='post'>
+<table>
+<tr>
+<td>Luas Lahan (Meter)</td>
+<td>:</td>
+<td><input type='number' name='alass3' value='0' onchange='hitungluas();'></td>
+</tr>
+<tr>
+<td>Dolomit yang dibutuhkan (Kg)</td>
+<td>:</td>
+<td> <input type='text' name='luass3' onchange='hitungluas();' disabled="true"></td>
+</tr>
+</table>
+</form>
+<h5>Keterangan :</h5>
+<p>Kebutuhan dolomit 3ton/ha</p>
+<h3>Program lainnya</h3>
+<ul>
+	<li><a href="pupuk.html">Penghitung kebutuhan pupuk kandang cabai</a></li>
+	<li><a href="index.html">Menghitung jumlah populasi tanaman</a></li>
+</ul>
+</body>
+<script type='text/javascript'>
+function hitungluas(){
+var alas = document.forms['hitungls3']['alass3'].value;
+alas = parseInt(alas);
+var luas = alas*0.3;
+document.forms['hitungls3']['luass3'].value = luas;
+}
+</script>
+</html>
